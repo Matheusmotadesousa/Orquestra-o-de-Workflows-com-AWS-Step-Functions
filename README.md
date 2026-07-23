@@ -5,18 +5,19 @@ Aqui você encontrará não apenas o código e as definições das máquinas de 
 
 ## **O que é AWS Step Functions?**  
 O AWS Step Functions é um serviço de orquestração serverless que permite coordenar múltiplos serviços AWS em fluxos de trabalho visualmente estruturados. Ele utiliza Máquinas de Estados definidas em Amazon States Language (ASL) para criar pipelines robustos com tratamento de erros, execuções paralelas e integração nativa com mais de 220 serviços AWS.  
-Integrações Poderosas
+
+## **Integrações Poderosas**  
 O que torna o Step Functions realmente poderoso é sua capacidade de se integrar nativamente com:
 
-AWS Lambda - Funções serverless para lógica de negócio
+* **  AWS Lambda - Funções serverless para lógica de negócio**
 
-Amazon DynamoDB - Operações CRUD em banco NoSQL
+* **  Amazon DynamoDB - Operações CRUD em banco NoSQL**
 
-Amazon SNS/SQS - Mensageria e notificações
+* **  Amazon SNS/SQS - Mensageria e notificações**
 
-AWS Batch - Processamento de dados em larga escala
+* **  AWS Batch - Processamento de dados em larga escala**
 
-Amazon SageMaker - Pipelines de machine learning
+* **  Amazon SageMaker - Pipelines de machine learning**
 
  Minha Jornada no Desafio  
 Fase 1: Configuração Inicial 
