@@ -1,5 +1,5 @@
 ## **Sobre o Projeto**  
-Este repositório documenta minha jornada no desafio de AWS Step Functions da DIO, onde explorei a orquestração de serviços serverless para criar fluxos de trabalho automatizados, resilientes e escaláveis.
+Este repositório documenta minha jornada no desafio de AWS Step Functions da DIO, onde explorei a orquestração de serviços serverless para criar fluxos de trabalho automatizados, resilientes e escaláveis.  
 
 Aqui você encontrará não apenas o código e as definições das máquinas de estados, mas também insights, aprendizados e boas práticas que adquiri durante esta imersão prática no universo da computação serverless.
 
