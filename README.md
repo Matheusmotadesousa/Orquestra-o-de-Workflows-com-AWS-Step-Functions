@@ -9,7 +9,7 @@ O AWS Step Functions é um serviço de orquestração serverless que permite coo
 ## **Integrações Poderosas**  
 O que torna o Step Functions realmente poderoso é sua capacidade de se integrar nativamente com:
 
-* **  AWS Lambda - Funções serverless para lógica de negócio**
+*   AWS Lambda - Funções serverless para lógica de negócio**
 
 * **  Amazon DynamoDB - Operações CRUD em banco NoSQL**
 
