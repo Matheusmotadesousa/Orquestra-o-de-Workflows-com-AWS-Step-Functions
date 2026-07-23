@@ -83,24 +83,18 @@ Desafio 1: Tratamento de Erros
 * Solução: Implementei Catch e Retry nos estados Task  
 
 ## **Desafio 2: Passagem de Dados**
+* Problema: Dados não eram propagados corretamente entre estados
+* Solução: Utilizei InputPath, OutputPath e ResultPath para controlar o fluxo de dados
+  
+## **O que aprendi.**
+* Orquestração Serverless é poderosa para automatizar processos complexos.  
+* O Amazon States Language é uma linguagem expressiva e flexível.  
+* Tratamento de erros é crucial para workflows robustos.  
+* Monitoramento via CloudWatch é essencial para produção.  
+* O Workflow Studio acelera significativamente o desenvolvimento.  
 
-Problema: Dados não eram propagados corretamente entre estados
-
-Solução: Utilizei InputPath, OutputPath e ResultPath para controlar o fluxo de dados  
-
-O que aprendi.
-Orquestração Serverless é poderosa para automatizar processos complexos
-
-O Amazon States Language é uma linguagem expressiva e flexível
-
-Tratamento de erros é crucial para workflows robustos
-
-Monitoramento via CloudWatch é essencial para produção
-
-O Workflow Studio acelera significativamente o desenvolvimento
-
-Para Próximos Passos.  
- Explorar Map State para processamento paralelo de arrays
-□ Integrar com SNS para notificações em tempo real
-□ Implementar Callback Pattern para interações humanas no workflow
-□ Criar pipelines de CI/CD com AWS CodePipeline
+## **Para Próximos Passos.**
+ Explorar Map State para processamento paralelo de arrays.  
+* Integrar com SNS para notificações em tempo real.  
+* Implementar Callback Pattern para interações humanas no workflow.  
+* Criar pipelines de CI/CD com AWS CodePipeline.  
