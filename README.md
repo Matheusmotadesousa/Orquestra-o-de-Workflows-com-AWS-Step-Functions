@@ -72,13 +72,12 @@ Fase 1: Configuração Inicial
     }
   }
 }  
-Fase 3: Execução e Testes  
-Executei o workflow com diferentes cenários
+## **Fase 3: Execução e Testes**  
+* Executei o workflow com diferentes cenários  
+* Monitorei as execuções no console  
+* Analisei os logs e métricas no CloudWatch  
 
-Monitorei as execuções no console
-
-Analisei os logs e métricas no CloudWatch
-Fase 4: Desafios e Soluções  
+## **Fase 4: Desafios e Soluções**
 Desafio 1: Tratamento de Erros
 
 Problema: Exceções não tratadas interrompiam o fluxo
