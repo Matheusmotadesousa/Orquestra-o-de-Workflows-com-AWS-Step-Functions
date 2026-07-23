@@ -78,13 +78,11 @@ Fase 1: Configuração Inicial
 * Analisei os logs e métricas no CloudWatch  
 
 ## **Fase 4: Desafios e Soluções**
-Desafio 1: Tratamento de Erros
+Desafio 1: Tratamento de Erros  
+* Problema: Exceções não tratadas interrompiam o fluxo  
+* Solução: Implementei Catch e Retry nos estados Task  
 
-Problema: Exceções não tratadas interrompiam o fluxo
-
-Solução: Implementei Catch e Retry nos estados Task
-
-Desafio 2: Passagem de Dados  
+## **Desafio 2: Passagem de Dados**
 
 Problema: Dados não eram propagados corretamente entre estados
 
