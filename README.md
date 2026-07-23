@@ -4,7 +4,7 @@ Este repositório documenta minha jornada no desafio de AWS Step Functions da DI
 Aqui você encontrará não apenas o código e as definições das máquinas de estados, mas também insights, aprendizados e boas práticas que adquiri durante esta imersão prática no universo da computação serverless.
 
 ## **O que é AWS Step Functions?**  
-O AWS Step Functions é um serviço de orquestração serverless que permite coordenar múltiplos serviços AWS em fluxos de trabalho visualmente estruturados. Ele utiliza Máquinas de Estados definidas em Amazon States Language (ASL) para criar pipelines robustos com tratamento de erros, execuções paralelas e integração nativa com mais de 220 serviços AWS.
+O AWS Step Functions é um serviço de orquestração serverless que permite coordenar múltiplos serviços AWS em fluxos de trabalho visualmente estruturados. Ele utiliza Máquinas de Estados definidas em Amazon States Language (ASL) para criar pipelines robustos com tratamento de erros, execuções paralelas e integração nativa com mais de 220 serviços AWS.  
 Integrações Poderosas
 O que torna o Step Functions realmente poderoso é sua capacidade de se integrar nativamente com:
 
