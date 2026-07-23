@@ -1,70 +1,113 @@
-# Título do Seu Projeto (Ex: Orquestração de Workflows com AWS Step Functions)
+Sobre o Projeto
+Este repositório documenta minha jornada no desafio de AWS Step Functions da DIO, onde explorei a orquestração de serviços serverless para criar fluxos de trabalho automatizados, resilientes e escaláveis.
 
-![Badge de Status](URL_para_um_badge_do_seu_repositorio) (Opcional)
+Aqui você encontrará não apenas o código e as definições das máquinas de estados, mas também insights, aprendizados e boas práticas que adquiri durante esta imersão prática no universo da computação serverless.
 
-Uma breve descrição do projeto. Ex: "Este repositório contém a documentação e os artefatos criados durante o desafio de AWS Step Functions, demonstrando a aplicação de conceitos de orquestração serverless."
+O que é AWS Step Functions?
+O AWS Step Functions é um serviço de orquestração serverless que permite coordenar múltiplos serviços AWS em fluxos de trabalho visualmente estruturados. Ele utiliza Máquinas de Estados definidas em Amazon States Language (ASL) para criar pipelines robustos com tratamento de erros, execuções paralelas e integração nativa com mais de 220 serviços AWS.
+Integrações Poderosas
+O que torna o Step Functions realmente poderoso é sua capacidade de se integrar nativamente com:
 
-## 📌 Visão Geral do Desafio
+AWS Lambda - Funções serverless para lógica de negócio
 
-Explique o objetivo do laboratório. Reforce que você consolidou seus conhecimentos sobre workflows automatizados com AWS Step Functions, aplicando a teoria na prática e documentando o processo para fins de estudo [citation:8].
+Amazon DynamoDB - Operações CRUD em banco NoSQL
 
-## 🎯 Objetivos de Aprendizagem
+Amazon SNS/SQS - Mensageria e notificações
 
-Liste os objetivos que você alcançou ao concluir o desafio, como:
-* Aplicar os conceitos de orquestração com Step Functions em um ambiente prático.
-* Documentar processos técnicos de forma clara e estruturada.
-* Utilizar o GitHub como ferramenta para compartilhamento de documentação técnica.
+AWS Batch - Processamento de dados em larga escala
 
-## 🛠️ Tecnologias Utilizadas
+Amazon SageMaker - Pipelines de machine learning
 
-Liste as principais ferramentas e serviços que você usou:
-* **AWS Step Functions:** Para a orquestração serverless do workflow.
-* **AWS Lambda:** Para executar a lógica de negócio (se aplicável).
-* **Amazon States Language (ASL):** Para definir a máquina de estados.
-* **Git & GitHub:** Para versionamento e documentação do projeto.
+ Minha Jornada no Desafio  
+Fase 1: Configuração Inicial 
+Criação da Máquina de Estados
 
-## 🧠 Principais Aprendizados e Conceitos
+Acessei o console AWS Step Functions
 
-Esta é a seção mais importante! Demonstre seu entendimento sobre os conceitos discutidos nas aulas.
+Utilizei o Workflow Studio para projetar visualmente o workflow
 
-* **O que é AWS Step Functions?**
-    Descreva o serviço como um orquestrador serverless que permite coordenar componentes de aplicações distribuídas em um fluxo de trabalho visual e durável [citation:5][citation:9].
+Defini os estados e transições usando ASL
 
-* **O que são Máquinas de Estados?**
-    Explique que os workflows são definidos como máquinas de estados, escritas em Amazon States Language (ASL), compostas por etapas chamadas "estados" [citation:5][citation:9].
+Permissões IAM
 
-* **Quais os Principais Estados?**
-    Cite e explique os estados que você utilizou:
-    * **Task State:** Representa uma única unidade de trabalho, como invocar uma função Lambda [citation:5].
-    * **Choice State:** Adiciona lógica condicional (if/else) ao seu fluxo.
-    * **Parallel State:** Executa múltiplas branches em paralelo.
-    * **Wait State:** Adiciona um delay (atraso) no workflow.
-    * **Pass State:** Útil para passar dados ou injetar valores estáticos no fluxo.
+Configurei a role IAM necessária para o Step Functions executar as tarefas
 
-* **Integrações e Casos de Uso:**
-    Explique como o Step Functions se integra com mais de 220 serviços AWS, como Lambda, DynamoDB, SNS, e SageMaker, e como isso possibilita casos de uso como pipelines de dados, automação de IT e aplicações de IA generativa [citation:5][citation:9].
+Garanti princípio de menor privilégio
+Fase 2: Definindo o Workflow
+{
+  "Comment": "Exemplo de workflow com Step Functions",
+  "StartAt": "Processar Dados",
+  "States": {
+    "Processar Dados": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:REGION:ACCOUNT_ID:function:processar-dados",
+      "Next": "Validar Resultado"
+    },
+    "Validar Resultado": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.status",
+          "StringEquals": "SUCESSO",
+          "Next": "Finalizar Sucesso"
+        },
+        {
+          "Variable": "$.status",
+          "StringEquals": "ERRO",
+          "Next": "Tratar Erro"
+        }
+      ],
+      "Default": "Aguardar"
+    },
+    "Finalizar Sucesso": {
+      "Type": "Pass",
+      "Result": "Workflow concluído com sucesso!",
+      "End": true
+    },
+    "Tratar Erro": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:REGION:ACCOUNT_ID:function:tratar-erro",
+      "End": true
+    },
+    "Aguardar": {
+      "Type": "Wait",
+      "Seconds": 10,
+      "Next": "Finalizar Sucesso"
+    }
+  }
+}
+Fase 3: Execução e Testes
+Executei o workflow com diferentes cenários
 
-## 🚀 Passo a Passo da Sua Experiência
+Monitorei as execuções no console
 
-Documente o processo que você seguiu. Isso torna sua experiência mais tangível. Pode ser um relato do que você fez.
+Analisei os logs e métricas no CloudWatch
+Fase 4: Desafios e Soluções
+Desafio 1: Tratamento de Erros
 
-1.  **Configuração Inicial:** Descreva como você acessou o console da AWS e criou a sua máquina de estados.
-2.  **Definição do Workflow:** Mostre como você usou o Workflow Studio para criar a máquina de estados visualmente, ou explique como escreveu a definição em ASL.
-3.  **Execução e Teste:** Explique como você executou o workflow e analisou a saída.
-4.  **Desafios e Soluções:** (Diferencial) Mencione algum desafio que você enfrentou e como o resolveu (ex: lidando com erros, configurando permissões IAM).
+Problema: Exceções não tratadas interrompiam o fluxo
 
-> **💡 Dica:** Incluir um diagrama do seu workflow aqui é uma excelente forma de demonstrar visualmente seu trabalho [citation:8][citation:12].
+Solução: Implementei Catch e Retry nos estados Task
 
-## 🖼️ Capturas de Tela
+Desafio 2: Passagem de Dados
 
-Esta seção é para organizar as imagens que você capturou.
+Problema: Dados não eram propagados corretamente entre estados
 
-```markdown
-### Visualização da Máquina de Estados
-![Visão geral do workflow no Step Functions](images/stepfunctions-workflow.png)
+Solução: Utilizei InputPath, OutputPath e ResultPath para controlar o fluxo de dados
 
-### Detalhe da Execução
-![Detalhes de uma execução bem-sucedida](images/execution-details.png)
+O que aprendi.
+Orquestração Serverless é poderosa para automatizar processos complexos
 
-### Log de Erros e Tratamento
-![Exemplo de tratamento de erro](images/error-handling.png)
+O Amazon States Language é uma linguagem expressiva e flexível
+
+Tratamento de erros é crucial para workflows robustos
+
+Monitoramento via CloudWatch é essencial para produção
+
+O Workflow Studio acelera significativamente o desenvolvimento
+
+Para Próximos Passos.
+ Explorar Map State para processamento paralelo de arrays
+□ Integrar com SNS para notificações em tempo real
+□ Implementar Callback Pattern para interações humanas no workflow
+□ Criar pipelines de CI/CD com AWS CodePipeline
