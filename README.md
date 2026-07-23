@@ -76,7 +76,7 @@ Fase 2: Definindo o Workflow
       "Next": "Finalizar Sucesso"
     }
   }
-}
+}  
 Fase 3: Execução e Testes  
 Executei o workflow com diferentes cenários
 
