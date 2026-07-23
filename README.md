@@ -19,22 +19,22 @@ O que torna o Step Functions realmente poderoso é sua capacidade de se integrar
 
 * Amazon SageMaker - Pipelines de machine learning.
 
- Minha Jornada no Desafio  
+## **Minha Jornada no Desafio**  
 Fase 1: Configuração Inicial 
-Criação da Máquina de Estados
+Criação da Máquina de Estados  
 
-Acessei o console AWS Step Functions
+Acessei o console AWS Step Functions  
 
-Utilizei o Workflow Studio para projetar visualmente o workflow
+Utilizei o Workflow Studio para projetar visualmente o workflow  
 
-Defini os estados e transições usando ASL
+Defini os estados e transições usando ASL  
 
-Permissões IAM
+Permissões IAM  
 
-Configurei a role IAM necessária para o Step Functions executar as tarefas
+Configurei a role IAM necessária para o Step Functions executar as tarefas  
 
-Garanti princípio de menor privilégio
-Fase 2: Definindo o Workflow
+Garanti princípio de menor privilégio  
+Fase 2: Definindo o Workflow  
 {
   "Comment": "Exemplo de workflow com Step Functions",
   "StartAt": "Processar Dados",
@@ -77,24 +77,24 @@ Fase 2: Definindo o Workflow
     }
   }
 }
-Fase 3: Execução e Testes
+Fase 3: Execução e Testes  
 Executei o workflow com diferentes cenários
 
 Monitorei as execuções no console
 
 Analisei os logs e métricas no CloudWatch
-Fase 4: Desafios e Soluções
+Fase 4: Desafios e Soluções  
 Desafio 1: Tratamento de Erros
 
 Problema: Exceções não tratadas interrompiam o fluxo
 
 Solução: Implementei Catch e Retry nos estados Task
 
-Desafio 2: Passagem de Dados
+Desafio 2: Passagem de Dados  
 
 Problema: Dados não eram propagados corretamente entre estados
 
-Solução: Utilizei InputPath, OutputPath e ResultPath para controlar o fluxo de dados
+Solução: Utilizei InputPath, OutputPath e ResultPath para controlar o fluxo de dados  
 
 O que aprendi.
 Orquestração Serverless é poderosa para automatizar processos complexos
@@ -107,7 +107,7 @@ Monitoramento via CloudWatch é essencial para produção
 
 O Workflow Studio acelera significativamente o desenvolvimento
 
-Para Próximos Passos.
+Para Próximos Passos.  
  Explorar Map State para processamento paralelo de arrays
 □ Integrar com SNS para notificações em tempo real
 □ Implementar Callback Pattern para interações humanas no workflow
