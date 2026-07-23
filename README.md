@@ -20,21 +20,16 @@ O que torna o Step Functions realmente poderoso é sua capacidade de se integrar
 * Amazon SageMaker - Pipelines de machine learning.
 
 ## **Minha Jornada no Desafio**  
-Fase 1: Configuração Inicial 
-Criação da Máquina de Estados  
-
-Acessei o console AWS Step Functions  
-
-Utilizei o Workflow Studio para projetar visualmente o workflow  
-
-Defini os estados e transições usando ASL  
-
-Permissões IAM  
-
+Fase 1: Configuração Inicial
+Criação da Máquina de Estados
+Acessei o console AWS Step Functions
+Utilizei o Workflow Studio para projetar visualmente o workflow
+Defini os estados e transições usando ASL
+Permissões IAM
 Configurei a role IAM necessária para o Step Functions executar as tarefas  
+Garanti princípio de menor privilégio
 
-Garanti princípio de menor privilégio  
-Fase 2: Definindo o Workflow  
+## **Fase 2: Definindo o Workflow**  
 {
   "Comment": "Exemplo de workflow com Step Functions",
   "StartAt": "Processar Dados",
